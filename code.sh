@@ -1,4 +1,9 @@
 #!/bin/bash
+# 
+# Add the filenames and their paths listed in a different file called - file_list.txt 
+# Format:
+#   /path/to/the/file/code.sh
+#   /path/to/the/file/sub/test.py
 
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <base_filename>"
