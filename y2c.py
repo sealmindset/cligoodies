@@ -1,3 +1,6 @@
+# The scripts automate the process of extracting structured information from OpenAPI specifications 
+# in YAML format and converts into a CSV files.
+
 import yaml
 import csv
 
