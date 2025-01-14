@@ -1,5 +1,20 @@
-# This script is a test harnest levage VulnAPI - an API REST endpoint scanner. https://github.com/cerberauth/vulnapi
-# The vulnerable API REST endpoint. https://github.com/erev0s/VAmPI
+# This script is a test harnest to levage VulnAPI - an API REST endpoint vuln scanner. https://github.com/cerberauth/vulnapi
+# The vulnerable API REST endpoint this is designed to test against. https://github.com/erev0s/VAmPI
+
+                    {
+                      "book_title": "bookTitle77",
+                      "user": "name1"
+                    },
+                    {
+                      "book_title": "bookTitle85",
+                      "user": "name2"
+                    },
+                    {
+                      "book_title": "bookTitle47",
+                      "user": "admin"
+                    }
+
+
 
 import subprocess
 from openapi_parser import parse
