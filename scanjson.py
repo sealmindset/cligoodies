@@ -1,5 +1,5 @@
 # This script is a test harness to leverage VulnAPI - an API REST endpoint vuln scanner. https://github.com/cerberauth/vulnapi
-# The vulnerable API REST endpoint this is designed to test against. https://github.com/erev0s/
+# VAmPI is the vulnerable API REST endpoint - https://erev0s.com/blog/vampi-vulnerable-api-security-testing/
 
 import subprocess
 from openapi_parser import parse
