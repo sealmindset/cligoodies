@@ -1,5 +1,5 @@
 # Author: sealmindset
-# bDate: 1/14/2025
+# Date: 1/14/2025
 
 # Purpose:
 # This script serves as a test harness for VulnAPI, an API REST endpoint vulnerability scanner. 
