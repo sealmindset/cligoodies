@@ -1,3 +1,6 @@
+# This script is a test harnest levage VulnAPI - an API REST endpoint scanner. https://github.com/cerberauth/vulnapi
+# The vulnerable API REST endpoint. https://github.com/erev0s/VAmPI
+
 import subprocess
 from openapi_parser import parse
 
@@ -56,7 +59,7 @@ for url in urls:
             print(f"Error Output:\n{e.stderr}")
 
 # Perform a file-based scan with vulnapi
-file_scan_command = f"echo '{token}' | vulnapi scan openapi openapi.json"
+file_scan_command = f"echo '{token}' | vulnapi scan openapi http://127.0.0.1:5001/openapi.json --proxy {proxy}"
 print(f"Executing file scan: {file_scan_command}")
 try:
     # Execute the file scan command
