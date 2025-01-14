@@ -1,5 +1,30 @@
-# This script is a test harness for VulnAPI - an API REST endpoint vuln scanner. https://github.com/cerberauth/vulnapi
-# VAmPI is the vulnerable API REST endpoint - https://erev0s.com/blog/vampi-vulnerable-api-security-testing/
+# Author: sealmindset
+# bDate: 1/14/2025
+
+# Purpose:
+# This script serves as a test harness for VulnAPI, an API REST endpoint vulnerability scanner. 
+# It facilitates automated security testing of APIs by dynamically substituting placeholders 
+# such as `{username}` and `{book_title}` in the extracted endpoints from an OpenAPI specification file 
+# and testing various combinations of values. It also supports file-based scans using the VulnAPI tool.
+
+# Description:
+# - Parses an OpenAPI specification file to extract API paths.
+# - Dynamically substitutes placeholders (`{username}`, `{book_title}`) in URLs with predefined values 
+#   (`usernames` and `book_titles` arrays) for comprehensive testing.
+# - Executes VulnAPI scan commands for each URL variation using curl.
+# - Includes support for file-based scans of the OpenAPI specification.
+# - Uses a proxy (`http://127.0.0.1:8080`) for all API requests and a hardcoded authentication token.
+# - Outputs the results of each scan and handles any errors that occur during command execution.
+
+# To do:
+# - [ ] Replace the hardcoded authentication token with a secure token retrieval mechanism (e.g., environment variables or a secret manager).
+# - [ ] Add error-handling logic to validate the existence of the OpenAPI file before parsing.
+# - [ ] Enhance logging to include detailed metadata for each test case (e.g., timestamp, URL tested, placeholder values used).
+# - [ ] Implement parallel or asynchronous execution to improve performance, especially for large sets of URLs.
+# - [ ] Add support for additional placeholder types and more dynamic parameter generation.
+# - [ ] Integrate reporting functionality to generate consolidated test results in formats like JSON or HTML.
+# - [ ] Include unit tests to validate script functionality and placeholder substitutions.
+# - [ ] Add input sanitization and validation for user-provided data to ensure robust error handling.
 
 import subprocess
 from openapi_parser import parse
