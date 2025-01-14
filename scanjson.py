@@ -30,3 +30,14 @@ for url in urls:
     except subprocess.CalledProcessError as e:
         print(f"Error occurred while executing command: {e}")
         print(f"Error Output:\n{e.stderr}")
+
+# Perform a file-based scan with vulnapi
+file_scan_command = f"echo '{token}' | vulnapi scan openapi openapi.json"
+print(f"Executing file scan: {file_scan_command}")
+try:
+    # Execute the file scan command
+    file_scan_result = subprocess.run(file_scan_command, shell=True, check=True, text=True, capture_output=True)
+    print(f"File Scan Output:\n{file_scan_result.stdout}")
+except subprocess.CalledProcessError as e:
+    print(f"Error occurred while executing file scan: {e}")
+    print(f"Error Output:\n{e.stderr}")
