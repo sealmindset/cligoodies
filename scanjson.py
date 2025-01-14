@@ -21,7 +21,7 @@ book_titles = ['bookTitle77', 'bookTitle85', 'bookTitle47']
 # Debugging: Print extracted URLs
 print("Extracted URLs:", urls)
 
-# Scan each URL using vulnapi
+# Scan each URL using vulnapi with curl
 for url in urls:
     # Check if the URL contains the placeholder '{username}' or '{book_title}'
     if '{username}' in url and '{book_title}' in url:
@@ -96,7 +96,7 @@ for url in urls:
             print(f"Error occurred while executing command for {url}: {e}")
             print(f"Error Output:\n{e.stderr}")
 
-# Perform a file-based scan with vulnapi using the modified command
+# Perform a file-based scan with openapi instead of curl
 file_scan_command = f"echo '{token}' | vulnapi scan openapi http://127.0.0.1:5001/openapi.json --proxy {proxy}"
 print(f"Executing file scan: {file_scan_command}")
 try:
